@@ -11,7 +11,17 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: platformio/action-platformio-tool@v1
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.platformio/.cache
+          key: ${{ runner.os }}-pio
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install PlatformIO Core
+        run: pip install --upgrade platformio
       - name: Build ESP32-S firmware
         run: pio run -e esp32s
       - name: Build ESP8266 firmware
