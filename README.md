@@ -1,7 +1,7 @@
 # ESP PoT-O Miner Firmware
 
 [![CI](https://img.shields.io/github/actions/workflow/status/TribeWarez/esp-pot-o-miner/ci.yml?branch=main)](https://github.com/TribeWarez/esp-pot-o-miner/actions)
-[![Releases](https://img.shields.io/github/v/release/TribeWarez/esp-pot-o-miner)](https://github.com/TribeWarez/esp-pot-o-miner/releases)
+[![Latest Tag](https://img.shields.io/github/v/tag/TribeWarez/esp-pot-o-miner?sort=semver)](https://github.com/TribeWarez/esp-pot-o-miner/tags)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Mining firmware for ESP32-S and ESP8266 microcontrollers.  
