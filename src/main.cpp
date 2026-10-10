@@ -1,5 +1,5 @@
 // PoT-O Miner Firmware for ESP32-S / ESP8266
-// Connects to pot.rpc.gateway.tribewarez.com, fetches challenges,
+// Connects to a PoT-O validator RPC endpoint, fetches challenges,
 // runs tensor operations, and submits proofs.
 
 #include <Arduino.h>

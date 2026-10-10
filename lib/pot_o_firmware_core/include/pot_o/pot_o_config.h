@@ -11,8 +11,10 @@
 #endif
 
 // ── RPC endpoint ────────────────────────────────────────────────────────────
+// Placeholder default. Set the current validator endpoint via build flag or
+// override here (see https://pot-o-miner.tribewarez.com/docs/).
 #ifndef POT_RPC_HOST
-#define POT_RPC_HOST "pot.rpc.gateway.tribewarez.com"
+#define POT_RPC_HOST "validator.example.com"
 #endif
 #ifndef POT_RPC_PORT
 #define POT_RPC_PORT 443
