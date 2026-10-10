@@ -21,7 +21,6 @@ Full documentation is published at [pot-o-miner.tribewarez.com/docs](https://pot
 - [Configuration Reference](docs/wiki/Configuration-Reference.md)
 - [Connecting to a Validator](docs/wiki/Connecting-to-a-Validator.md) — setting up and adjusting the validator URL
 - [Mining Flow](docs/wiki/Mining-Flow.md)
-- [Device Self-Check](docs/wiki/Device-Self-Check.md)
 - [Troubleshooting](docs/wiki/Troubleshooting.md)
 - [Contributing Guidelines](docs/wiki/Contributing-Guidelines.md)
 
@@ -81,31 +80,9 @@ pio device monitor -b 115200
 
 For full integration details (endpoints, device_id on submit, progress reporting), see the [Mining Flow](docs/wiki/Mining-Flow.md) wiki page.
 
-## Firmware self-check on boot (optional)
+## Firmware Updates
 
-To keep devices up to date, you can perform a lightweight self-check against the status gateway when the ESP boots:
-
-- Base URL: `https://status.rpc.gateway.tribewarez.com`
-- Endpoint: `/api/device/self-check`
-- Query parameters:
-  - `device_type`: `esp32` or `esp8266`
-  - `channel`: e.g. `testnet`
-  - `kind`: `firmware`
-  - `current_version`: firmware version string compiled into the binary (e.g. `POT_O_VERSION`)
-
-Example HTTP request:
-
-```text
-GET https://status.rpc.gateway.tribewarez.com/api/device/self-check?device_type=esp32&channel=testnet&kind=firmware&current_version=1.0.1
-```
-
-If the response reports `update_required` or `update_recommended` and includes an `artifact.download_url`, you can:
-
-1. Download the new firmware image with a small HTTPS client.
-2. Verify the `checksum` (if present).
-3. Flash the new image according to your OTA update strategy for the device.
-
-The exact OTA mechanism depends on your hardware and bootloader, but this endpoint gives you a single, canonical source of truth for which firmware version to run per device type and channel.
+The device self-check status gateway is no longer available. For current firmware update guidance, see the [documentation site](https://pot-o-miner.tribewarez.com/docs/).
 
 ## Architecture
 

@@ -68,11 +68,6 @@ ESP8266 supports only `relu`, `sigmoid`, `dot_product`, and `normalize`. Use an 
 2. Confirm the neural path parameters match the server.
 3. Ensure the device clock/timestamp is acceptable to the validator.
 
-## Firmware Self-Check Fails
-
-1. Verify `status.rpc.gateway.tribewarez.com` is reachable from the device.
-2. Confirm `device_type`, `channel`, `kind`, and `current_version` query parameters are correct (see [Device Self-Check](Device-Self-Check)).
-
 ## Watchdog Reset During Mining
 
 The nonce loop calls `yield()` every 1000 iterations to prevent WDT resets. If resets still occur, reduce `MAX_MINE_ITERATIONS`.

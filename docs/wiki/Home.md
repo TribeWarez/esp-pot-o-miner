@@ -8,7 +8,6 @@ Welcome to the ESP PoT-O Miner firmware documentation.
 - [Configuration Reference](Configuration-Reference)
 - [Connecting to a Validator](Connecting-to-a-Validator)
 - [Mining Flow](Mining-Flow)
-- [Device Self-Check](Device-Self-Check)
 - [Troubleshooting](Troubleshooting)
 - [Contributing Guidelines](Contributing-Guidelines)
 

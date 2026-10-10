@@ -44,7 +44,7 @@ See [Connecting to a Validator](Connecting-to-a-Validator) for how the URL is bu
 
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
-| POT_O_VERSION | string | "1.0.1" | Firmware version string, used by the self-check endpoint |
+| POT_O_VERSION | string | "1.0.1" | Firmware version string |
 
 ## Neural Path
 
