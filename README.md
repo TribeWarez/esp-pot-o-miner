@@ -11,6 +11,19 @@ Connects to `pot.rpc.gateway.tribewarez.com` to fetch PoT-O challenges, execute 
 - **Repository:** [github.com/TribeWarez/esp-pot-o-miner](https://github.com/TribeWarez/esp-pot-o-miner)
 - **PoT-O gateway:** [pot.rpc.gateway.tribewarez.com](https://pot.rpc.gateway.tribewarez.com)
 
+## Documentation
+
+Full documentation lives in the wiki (`docs/wiki/`):
+
+- [Home](docs/wiki/Home.md) — overview and navigation
+- [Building the Firmware](docs/wiki/Building-the-Firmware.md)
+- [Configuration Reference](docs/wiki/Configuration-Reference.md)
+- [Connecting to a Validator](docs/wiki/Connecting-to-a-Validator.md) — setting up and adjusting the validator URL
+- [Mining Flow](docs/wiki/Mining-Flow.md)
+- [Device Self-Check](docs/wiki/Device-Self-Check.md)
+- [Troubleshooting](docs/wiki/Troubleshooting.md)
+- [Contributing Guidelines](docs/wiki/Contributing-Guidelines.md)
+
 ## Device Capabilities
 
 | Device   | Max Tensor | Working Memory | Supported Ops |
@@ -27,7 +40,7 @@ Connects to `pot.rpc.gateway.tribewarez.com` to fetch PoT-O challenges, execute 
 
 ### Configure WiFi
 
-Edit `include/pot_o_config.h`:
+Edit `lib/pot_o_firmware_core/include/pot_o/pot_o_config.h`:
 
 ```c
 #define WIFI_SSID "YOUR_SSID"
@@ -65,7 +78,7 @@ pio device monitor -b 115200
 3. **Progress** (recommended): `POST /devices/progress` with `challenge_id`, `hash`, and `device_id` every few seconds while mining so the status dashboard shows live activity.
 4. **Heartbeat** every 30s via `GET /health`
 
-For full CLI and ESP integration details (curl examples, device_id on submit, progress reporting), see the validator root [CLI_AND_ESP_GUIDE.md](../../CLI_AND_ESP_GUIDE.md).
+For full integration details (endpoints, device_id on submit, progress reporting), see the [Mining Flow](docs/wiki/Mining-Flow.md) wiki page.
 
 ## Firmware self-check on boot (optional)
 
