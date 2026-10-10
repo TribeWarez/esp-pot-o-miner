@@ -5,15 +5,16 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Mining firmware for ESP32-S and ESP8266 microcontrollers.  
-Connects to `pot.rpc.gateway.tribewarez.com` to fetch PoT-O challenges, execute tensor operations on-device, and submit proofs.
+Connects to a PoT-O validator RPC endpoint to fetch challenges, execute tensor operations on-device, and submit proofs.
 
+- **Documentation site:** [pot-o-miner.tribewarez.com](https://pot-o-miner.tribewarez.com/)
+- **Documentation viewer:** [pot-o-miner.tribewarez.com/docs](https://pot-o-miner.tribewarez.com/docs/)
 - **Releases (binaries):** [github.com/TribeWarez/esp-pot-o-miner/releases](https://github.com/TribeWarez/esp-pot-o-miner/releases)
 - **Repository:** [github.com/TribeWarez/esp-pot-o-miner](https://github.com/TribeWarez/esp-pot-o-miner)
-- **PoT-O gateway:** [pot.rpc.gateway.tribewarez.com](https://pot.rpc.gateway.tribewarez.com)
 
 ## Documentation
 
-Full documentation lives in the wiki (`docs/wiki/`):
+Full documentation is published at [pot-o-miner.tribewarez.com/docs](https://pot-o-miner.tribewarez.com/docs/) and maintained in the wiki (`docs/wiki/`):
 
 - [Home](docs/wiki/Home.md) — overview and navigation
 - [Building the Firmware](docs/wiki/Building-the-Firmware.md)
@@ -95,7 +96,7 @@ To keep devices up to date, you can perform a lightweight self-check against the
 Example HTTP request:
 
 ```text
-GET https://status.rpc.gateway.tribewarez.com/api/device/self-check?device_type=esp32&channel=testnet&kind=firmware&current_version=1.0.0
+GET https://status.rpc.gateway.tribewarez.com/api/device/self-check?device_type=esp32&channel=testnet&kind=firmware&current_version=1.0.1
 ```
 
 If the response reports `update_required` or `update_recommended` and includes an `artifact.download_url`, you can:
@@ -118,7 +119,9 @@ Hardware SHA on ESP32 is enabled via `sdkconfig.defaults` (`CONFIG_MBEDTLS_HARDW
 
 ## RPC Endpoint
 
-Default: `https://pot.rpc.gateway.tribewarez.com`
+The validator RPC endpoint is set at build time via `POT_RPC_HOST` (see the [Configuration Reference](docs/wiki/Configuration-Reference.md)).
+
+The previous public validator endpoint is no longer available. For the current endpoint, see the [documentation site](https://pot-o-miner.tribewarez.com/docs/).
 
 Override in `platformio.ini` build flags:
 

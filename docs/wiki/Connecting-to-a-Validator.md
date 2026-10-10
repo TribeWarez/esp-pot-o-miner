@@ -2,7 +2,7 @@
 
 The firmware talks to a PoT-O validator RPC endpoint. This page covers setting up and adjusting that URL.
 
-Default endpoint: `https://pot.rpc.gateway.tribewarez.com`
+There is no fixed public endpoint in these docs — the previous validator endpoint is no longer available. For the current endpoint, see the [documentation site](https://pot-o-miner.tribewarez.com/docs/).
 
 ## How the URL Is Built
 
@@ -48,11 +48,13 @@ Override the `#ifndef` defaults in `lib/pot_o_firmware_core/include/pot_o/pot_o_
 
 ## Examples
 
-### Default testnet (HTTPS)
+### Public validator (HTTPS)
+
+Use the current public endpoint from the [documentation site](https://pot-o-miner.tribewarez.com/docs/):
 
 ```ini
 build_flags =
-    -DPOT_RPC_HOST=\"pot.rpc.gateway.tribewarez.com\"
+    -DPOT_RPC_HOST=\"your-validator.example.com\"
     -DPOT_RPC_PORT=443
     -DPOT_RPC_TLS=1
 ```
@@ -68,7 +70,7 @@ build_flags =
     -DPOT_RPC_TLS=0
 ```
 
-### Custom testnet (HTTPS)
+### Custom validator (HTTPS)
 
 ```ini
 build_flags =

@@ -16,8 +16,10 @@ Welcome to the ESP PoT-O Miner firmware documentation.
 
 Mining firmware for ESP32-S and ESP8266 microcontrollers. It connects to a PoT-O (Proof of Tensor Optimizations) validator RPC endpoint, fetches tensor challenges, executes tensor operations on-device, computes MML scores, searches for neural path matches via nonce iteration, and submits proofs for on-chain verification.
 
-Default RPC endpoint: `https://pot.rpc.gateway.tribewarez.com`
+The validator RPC endpoint is configured at build time. The previous public validator endpoint is no longer available — see the [documentation site](https://pot-o-miner.tribewarez.com/docs/) for the current endpoint.
 
+- **Documentation site:** [pot-o-miner.tribewarez.com](https://pot-o-miner.tribewarez.com/)
+- **Documentation viewer:** [pot-o-miner.tribewarez.com/docs](https://pot-o-miner.tribewarez.com/docs/)
 - **Releases (binaries):** [github.com/TribeWarez/esp-pot-o-miner/releases](https://github.com/TribeWarez/esp-pot-o-miner/releases)
 - **Repository:** [github.com/TribeWarez/esp-pot-o-miner](https://github.com/TribeWarez/esp-pot-o-miner)
 - **Validator:** [github.com/TribeWarez/pot-o-validator](https://github.com/TribeWarez/pot-o-validator)

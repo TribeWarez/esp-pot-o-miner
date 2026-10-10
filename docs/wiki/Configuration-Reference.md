@@ -19,11 +19,11 @@ Build flags are `-D` defines; because the header uses `#ifndef` guards, any valu
 
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
-| POT_RPC_HOST | string | "pot.rpc.gateway.tribewarez.com" | Validator hostname |
+| POT_RPC_HOST | string | (build-time) | Validator hostname — see the [documentation site](https://pot-o-miner.tribewarez.com/docs/) for the current endpoint |
 | POT_RPC_PORT | int | 443 | HTTP port (used only when `POT_RPC_TLS=0`) |
 | POT_RPC_TLS | int | 1 | 1 = HTTPS (port implied 443), 0 = HTTP |
 
-See [Connecting to a Validator](Connecting-to-a-Validator) for how the URL is built and how to change it.
+See [Connecting to a Validator](Connecting-to-a-Validator) for how the URL is built and how to change it. The public endpoint is not fixed in these docs — the previous validator endpoint is no longer available.
 
 ## Mining Parameters
 
@@ -44,7 +44,7 @@ See [Connecting to a Validator](Connecting-to-a-Validator) for how the URL is bu
 
 | Field | Type | Default | Description |
 |-------|------|---------|-------------|
-| POT_O_VERSION | string | "1.0.0" | Firmware version string, used by the self-check endpoint |
+| POT_O_VERSION | string | "1.0.1" | Firmware version string, used by the self-check endpoint |
 
 ## Neural Path
 

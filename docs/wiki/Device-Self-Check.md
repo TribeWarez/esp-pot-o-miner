@@ -20,7 +20,7 @@ On boot, the firmware can perform a lightweight self-check against the status ga
 ## Example Request
 
 ```text
-GET https://status.rpc.gateway.tribewarez.com/api/device/self-check?device_type=esp32&channel=testnet&kind=firmware&current_version=1.0.0
+GET https://status.rpc.gateway.tribewarez.com/api/device/self-check?device_type=esp32&channel=testnet&kind=firmware&current_version=1.0.1
 ```
 
 ## Handling the Response
