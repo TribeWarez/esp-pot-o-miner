@@ -33,4 +33,4 @@ Default RPC endpoint: `https://pot.rpc.gateway.tribewarez.com`
 
 - GitHub Issues — Bug reports and feature requests
 - GitHub Discussions — Community Q&A
-- Security Advisories — Report vulnerabilities (see [SECURITY.md](../../SECURITY.md))
+- Security Advisories — Report vulnerabilities (see [SECURITY.md](https://github.com/TribeWarez/esp-pot-o-miner/blob/main/SECURITY.md))
