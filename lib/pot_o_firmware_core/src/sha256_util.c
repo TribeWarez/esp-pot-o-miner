@@ -5,10 +5,7 @@
 #include <stdio.h>
 
 #if defined(ESP32S_DEVICE)
-  #include <mbedtls/sha256.h>
   /* mbedtls uses ESP32 hardware SHA when CONFIG_MBEDTLS_HARDWARE_SHA=y (e.g. via sdkconfig.defaults) */
-  struct SHA256Ctx { mbedtls_sha256_context ctx; };
-
   void sha256_raw(const uint8_t* data, size_t len, uint8_t out[32]) {
       mbedtls_sha256_context ctx;
       mbedtls_sha256_init(&ctx);
@@ -30,10 +27,7 @@
       mbedtls_sha256_free(&c->ctx);
   }
 #else
-  /* ESP8266 */
-  #include <Hash.h>
-  struct SHA256Ctx { br_sha256_context ctx; };
-
+  /* ESP8266 BearSSL */
   void sha256_raw(const uint8_t* data, size_t len, uint8_t out[32]) {
       br_sha256_context ctx;
       br_sha256_init(&ctx);

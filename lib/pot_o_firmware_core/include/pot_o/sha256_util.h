@@ -4,12 +4,20 @@
 #include <stdint.h>
 #include <stddef.h>
 
+// SHA-256 context. The storage backend is platform-specific: mbedtls on ESP32
+// (hardware-accelerated when CONFIG_MBEDTLS_HARDWARE_SHA=y) and BearSSL on
+// ESP8266. The complete type is exposed so callers can allocate it on the stack.
+#if defined(ESP32S_DEVICE)
+  #include <mbedtls/sha256.h>
+  typedef struct SHA256Ctx { mbedtls_sha256_context ctx; } SHA256Ctx;
+#else
+  #include <bearssl/bearssl_hash.h>
+  typedef struct SHA256Ctx { br_sha256_context ctx; } SHA256Ctx;
+#endif
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-// Opaque context; platform-specific implementation in sha256_util_esp32.c / sha256_util_esp8266.c
-typedef struct SHA256Ctx SHA256Ctx;
 
 void sha256_raw(const uint8_t* data, size_t len, uint8_t out[32]);
 
